@@ -1,11 +1,32 @@
-import React from 'react';
+"use client";
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 import { IoLocationSharp } from "react-icons/io5";
 
 type InfoProps = {
 
 };
 
+const getIndianTime = () => {
+    const options: Intl.DateTimeFormatOptions = {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+        timeZone: "Asia/Kolkata",
+    };
+    return new Intl.DateTimeFormat("en-GB", options).format(new Date());
+};
+
 const Info: React.FC<InfoProps> = () => {
+
+    const [time, setTime] = useState(getIndianTime());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime(getIndianTime());
+        }, 60 * 1000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <div
@@ -28,8 +49,27 @@ const Info: React.FC<InfoProps> = () => {
             >
                 Delhi, India.
             </div>
-            <div className="relative z-10 text-9xl text-white font-[var(--font-bodoni)]">
-                11:44
+            <div className="relative z-10 text-9xl text-white font-[var(--font-bodoni)]  flex gap-4">
+                {time.split("").map((char, idx) => (
+                    <div key={idx} className="relative w-[70px] h-[130px] overflow-hidden">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={char}
+                                initial={{ y: -100, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                exit={{ y: 100, opacity: 0 }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 120,
+                                    damping: 15,
+                                }}
+                                className="absolute inset-0 flex items-center justify-center"
+                            >
+                                {char}
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
+                ))}
             </div>
         </div>
     )
