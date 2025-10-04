@@ -5,11 +5,15 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex h-screen bg-neutral-900 px-2 py-2 text-white">
+    <div className="flex flex-col h-screen bg-neutral-900 px-2 py-2 text-white border">
+      <div className="p-3"></div>
       <div className="flex gap-3 w-full">
         <div className=" ">  <Sidebar /></div>
         <div className="flex-1 w-full">
-          <Info />
+          <div className=" flex flex-col  justify-center items-center">
+            <Info />
+            <div>hello</div>
+          </div>
         </div>
       </div>
       <BottomAppBar />

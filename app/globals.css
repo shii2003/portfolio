@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+    font-family: var(--font-bodoni), serif;
+}
+
 body {
     @apply bg-neutral-900;
 }
