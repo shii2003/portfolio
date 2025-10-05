@@ -1,23 +1,23 @@
 import React from 'react';
 import Image from 'next/image';
 
-type LogoContainerProps = {
+type ProjectCardLogoProps = {
     src: string;
-    alt?: string;
-    height?: number;
-    width?: number;
+    alt: string;
+    width: number;
+    height: number;
 };
 
-const LogoContainer: React.FC<LogoContainerProps> = ({
+const ProjectCardLogo: React.FC<ProjectCardLogoProps> = ({
     src,
     alt = "Logo",
-    height = 35,
-    width = 35,
+    width = 40,
+    height = 40
 }) => {
 
     return (
         <div
-            className='flex border border-neutral-600 rounded-md px-1 py-0.5 bg-neutral-700/50'
+            className='flex  rounded-md px-1 border border-neutral-700 bg-neutral-700 py-0.5'
             style={{ width, height }}
         >
             <Image
@@ -30,4 +30,4 @@ const LogoContainer: React.FC<LogoContainerProps> = ({
         </div>
     )
 }
-export default LogoContainer;
+export default ProjectCardLogo;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BsGithub } from "react-icons/bs";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 
 type BottomAppBarProps = {
@@ -19,6 +20,18 @@ const BottomAppBar: React.FC<BottomAppBarProps> = () => {
             </div>
             <div className='flex items-center justify-center h-10 w-10 px-1 py-0.5 border-2 border-neutral-400 rounded-md transition-transform duration-200 ease-in-out hover:scale-110 hover:border-neutral-300'>
                 <IoIosMail className='text-neutral-200' size={30} />
+            </div>
+            <div className='flex items-center justify-center  px-1 py-0.5 rounded-md transition-transform duration-200 ease-in-out hover:scale-110 hover:border-neutral-300 gap-2 cursor-pointer'>
+                <div className='text-neutral-200 font-semibold text-md'>
+                    Blog
+                </div>
+                <FaExternalLinkAlt />
+            </div>
+            <div className='flex items-center justify-center  px-1 py-0.5 rounded-md transition-transform duration-200 ease-in-out hover:scale-110 hover:border-neutral-300 gap-2 cursor-pointer'>
+                <div className='text-neutral-200 font-semibold text-md'>
+                    Projects
+                </div>
+                <FaExternalLinkAlt />
             </div>
         </div>
     )
