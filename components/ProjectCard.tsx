@@ -1,6 +1,8 @@
+"use client";
 import React from 'react';
 import Image from 'next/image';
 import ProjectCardLogo from './ProjectCardLogo';
+import { motion } from 'framer-motion';
 
 type ProjectCardProps = {
 
@@ -9,28 +11,30 @@ type ProjectCardProps = {
 const ProjectCard: React.FC<ProjectCardProps> = () => {
 
     return (
-        <div
+        <motion.div
             className="
-        w-80 flex flex-col rounded-md border border-neutral-700 px-3 py-2 
-        relative overflow-hidden
-        bg-[url('/new-background.png')] bg-cover bg-center
-        before:absolute before:inset-0 
-        before:bg-radial-gradient before:from-neutral-700/60 before:to-transparent 
-        before:opacity-80 before:pointer-events-none
+      w-80 flex flex-col rounded-md border border-neutral-700 px-2 py-2 
+      relative overflow-hidden cursor-pointer 
+      bg-[url('/new-background.png')] bg-cover bg-center
+      before:absolute before:inset-0 
+      before:bg-[radial-gradient(circle_at_center,theme(colors.neutral.600)_0%,theme(colors.neutral.900)_100%)] 
+      before:opacity-70 before:pointer-events-none
       "
+            whileHover={{ scale: 1.05 }}
+            transition={{
+                type: "spring",
+                stiffness: 200,
+                damping: 18,
+                duration: 0.4,
+            }}
         >
             <div className="flex flex-col gap-2 relative z-10">
-                <div className="text-lg font-bold text-white">
-                    Project Title
-                </div>
-
-                {/* ✅ Fixed-size container for the image */}
                 <div className="relative w-full h-40 rounded-md overflow-hidden border border-neutral-700">
                     <Image
                         src="/repo-image.png"
                         alt="repo image"
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-700"
                     />
                 </div>
 
@@ -43,9 +47,10 @@ const ProjectCard: React.FC<ProjectCardProps> = () => {
                     <ProjectCardLogo src="/TailwindCSS.svg" alt="tailwindcss" width={30} height={30} />
                     <ProjectCardLogo src="/Typescript.svg" alt="typescript" width={30} height={30} />
                     <ProjectCardLogo src="/postgresql.svg" alt="postgresql" width={30} height={30} />
+                    <ProjectCardLogo src="/redis.svg" alt="redis" width={30} height={30} />
                 </div>
             </div>
-        </div>
-    )
+        </motion.div>
+    );
 }
 export default ProjectCard;

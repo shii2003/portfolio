@@ -11,7 +11,7 @@ type SidebarProps = {
 const Sidebar: React.FC<SidebarProps> = () => {
 
     return (
-        <div className='flex flex-col border border-neutral-700 max-w-96 rounded-md px-2 py-2 ml-7 bg-neutral-800/30'>
+        <div className='flex flex-col border border-neutral-700 max-w-96 rounded-md px-2 py-2 ml-2 md:ml-7 bg-neutral-800/30'>
             <div className='mb-2 font-bold text-lg'>Shivani Teotia </div>
             <div className='flex flex-col gap-2 mb-2'>
                 <div className='flex flex-col'>
