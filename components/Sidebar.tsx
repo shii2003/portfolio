@@ -3,6 +3,7 @@ import Image from 'next/image';
 import LogoContainer from './LogoContainer';
 import { IoLocationSharp, IoSchoolSharp } from "react-icons/io5";
 import { TbPointFilled } from "react-icons/tb";
+import { IoIosMail } from 'react-icons/io';
 
 type SidebarProps = {
 
@@ -41,6 +42,14 @@ const Sidebar: React.FC<SidebarProps> = () => {
                             </div>
                             <div>
                                 Bennett University, Noida, India.
+                            </div>
+                        </div>
+                        <div className='flex items-center gap-2'>
+                            <div>
+                                <IoIosMail className='text-blue-300' />
+                            </div>
+                            <div>
+                                shivaniteotia743@gmail.com
                             </div>
                         </div>
                         <div className='flex items-center gap-2'>
@@ -88,7 +97,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
                     <LogoContainer src='/docker-logo.svg' alt='docker' />
                     <LogoContainer src='/awslogo.svg' alt='aws' />
                     <LogoContainer src='/kubernetes.svg' alt='kubernetes' />
-                    <LogoContainer src='/awslambda.svg' alt='lambda' />
+                    <LogoContainer src='/aws-lambda.svg' alt='lambda' />
                 </div>
             </div>
         </div>

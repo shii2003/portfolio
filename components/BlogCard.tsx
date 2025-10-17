@@ -4,10 +4,13 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import ProjectCardLogo from './ProjectCardLogo';
 
 type BlogCardProps = {
-
+    srcImg: string,
+    altImg: string,
+    title: string,
+    details: string[],
 };
 
-const BlogCard: React.FC<BlogCardProps> = () => {
+const BlogCard: React.FC<BlogCardProps> = ({ srcImg, altImg, title, details }) => {
 
     return (
         <div
@@ -18,30 +21,34 @@ const BlogCard: React.FC<BlogCardProps> = () => {
       before:absolute before:inset-0 
       before:bg-[radial-gradient(circle_at_center,theme(colors.neutral.800)_0%,theme(colors.neutral.900)_100%)] 
       before:opacity-70 before:pointer-events-none
-      text-white
+      text-white hover:bg-neutral-600/50
       "
         >
             <div className="relative z-10 space-y-1">
                 <div className="flex  items-center justify-between">
                     <div className='text-lg font-semibold'>
-                        Text
+                        {title}
                     </div>
-                    <div className='text-neutral-400'>
+                    <div className='text-neutral-400 hover:text-white transform transition-transform duration-300 ease-in-out hover:scale-110'>
                         <FaExternalLinkAlt />
                     </div>
                 </div>
                 <div className="flex gap-2 rounded-md ">
-                    <div className='flex rounded-md overflow-hidden'>
+                    <div className='flex rounded-md overflow-hidden border-2 border-neutral-600'>
                         <Image
-                            src={'/aws-bg.png'}
-                            alt={"aws_background"}
+                            src={srcImg}
+                            alt={altImg}
                             width={100}
                             height={70}
                         />
                     </div>
-                    <div className='text-sm text-neutral-300 break-all'>
-                        kdslkdjlskdlskdjlskdjlskdjlskdjl;skdjlskdfslkdsldkj
-                    </div>
+                    {details?.map((detail, idx) => (
+                        <div
+                            key={idx}
+                            className='text-sm text-neutral-300 break-all'>
+                            {detail}
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

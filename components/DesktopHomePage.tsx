@@ -4,6 +4,7 @@ import Info from './Info';
 import ProjectCard from './ProjectCard';
 import BlogCard from './BlogCard';
 import BottomAppBar from './BottomAppBar';
+import ProjectsAndBlogComponent from './ProjectsAndBlogComponent';
 
 type DesktopHomePageProps = {
 
@@ -22,24 +23,7 @@ const DesktopHomePage: React.FC<DesktopHomePageProps> = () => {
                             <div className='flex items-center justify-center'>
                                 <Info />
                             </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <div className="flex items-center text-lg px-2 py-2 font-semibold border-b border-neutral-700">
-                                    PROJECTS
-                                </div>
-                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4 mb-6  justify-center items-center">
-                                    <ProjectCard />
-                                    <ProjectCard />
-                                    <ProjectCard />
-                                    <ProjectCard />
-                                </div>
-                                <div className="flex items-center text-lg px-2 py-2 font-semibold border-b border-neutral-700">
-                                    BLOG
-                                </div>
-                                <div className="flex flex-col gap-6 mt-4 mb-6 items-start px-2 py-2 " >
-                                    <BlogCard />
-                                    <BlogCard />
-                                </div>
-                            </div>
+                            <ProjectsAndBlogComponent />
                         </div>
                     </div>
                 </div>
