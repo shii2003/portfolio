@@ -2,12 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import LogoContainer from './LogoContainer';
 import { IoLocationSharp, IoSchoolSharp } from "react-icons/io5";
-import { TbPointFilled } from "react-icons/tb";
 import { IoIosMail } from 'react-icons/io';
 
-type SidebarProps = {
-
-};
+type SidebarProps = Record<string, never>;
 
 const Sidebar: React.FC<SidebarProps> = () => {
 

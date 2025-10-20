@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { FaExternalLinkAlt } from "react-icons/fa";
-import ProjectCardLogo from './ProjectCardLogo';
 
 type BlogCardProps = {
     srcImg: string,

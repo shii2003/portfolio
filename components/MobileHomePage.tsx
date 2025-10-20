@@ -3,9 +3,7 @@ import Sidebar from './Sidebar';
 import BottomAppBar from './BottomAppBar';
 import ProjectsAndBlogComponent from './ProjectsAndBlogComponent';
 
-type MobileHomePageProps = {
-
-};
+type MobileHomePageProps = Record<string, never>;
 
 const MobileHomePage: React.FC<MobileHomePageProps> = () => {
 

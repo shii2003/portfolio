@@ -3,9 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import { IoLocationSharp } from "react-icons/io5";
 
-type InfoProps = {
-
-};
+type InfoProps = Record<string, never>;
 
 const getIndianTime = () => {
     const options: Intl.DateTimeFormatOptions = {

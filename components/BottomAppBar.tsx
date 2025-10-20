@@ -2,13 +2,9 @@
 import React from 'react';
 import { BsGithub } from "react-icons/bs";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
-import Link from 'next/link';
 
-type BottomAppBarProps = {
-
-};
+type BottomAppBarProps = Record<string, never>;
 
 const BottomAppBar: React.FC<BottomAppBarProps> = () => {
     const getScrollableParent = (element: HTMLElement | null): HTMLElement | null => {

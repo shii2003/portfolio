@@ -1,8 +1,6 @@
 import React from 'react';
 
-type FooterProps = {
-
-};
+type FooterProps = Record<string, never>;
 
 const Footer: React.FC<FooterProps> = () => {
 

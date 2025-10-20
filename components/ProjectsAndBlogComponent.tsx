@@ -3,9 +3,7 @@ import ProjectCard from './ProjectCard';
 import BlogCard from './BlogCard';
 import Footer from './Footer';
 
-type ProjectsAndBlogComponentProps = {
-
-};
+type ProjectsAndBlogComponentProps = Record<string, never>;
 
 const ProjectsAndBlogComponent: React.FC<ProjectsAndBlogComponentProps> = () => {
 
@@ -112,13 +110,7 @@ const ProjectsAndBlogComponent: React.FC<ProjectsAndBlogComponentProps> = () => 
                     blogLink='https://medium.com/@shivaniteotia003/building-and-deploying-a-serverless-crud-api-to-aws-lambda-with-node-js-and-typescript-05bfe21e528c'
 
                 />
-                {/* <BlogCard
-                    srcImg="/repo-image.png"
-                    altImg="aws-image"
-                    title='aws'
-                    details={["how to host an nodejs typescript api on lambda"]}
-                    blogLink='https://medium.com/'
-                /> */}
+
             </div>
             <Footer />
         </div>

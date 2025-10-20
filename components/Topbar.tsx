@@ -1,8 +1,6 @@
 import React from 'react';
 
-type TopbarProps = {
-
-};
+type TopbarProps = Record<string, never>;
 
 const Topbar: React.FC<TopbarProps> = () => {
 

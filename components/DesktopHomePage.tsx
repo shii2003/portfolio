@@ -1,14 +1,10 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import Info from './Info';
-import ProjectCard from './ProjectCard';
-import BlogCard from './BlogCard';
 import BottomAppBar from './BottomAppBar';
 import ProjectsAndBlogComponent from './ProjectsAndBlogComponent';
 
-type DesktopHomePageProps = {
-
-};
+type DesktopHomePageProps = Record<string, never>;
 
 const DesktopHomePage: React.FC<DesktopHomePageProps> = () => {
 

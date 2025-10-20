@@ -1,10 +1,5 @@
-import BlogCard from "@/components/BlogCard";
-import BottomAppBar from "@/components/BottomAppBar";
 import DesktopHomePage from "@/components/DesktopHomePage";
-import Info from "@/components/Info";
 import MobileHomePage from "@/components/MobileHomePage";
-import ProjectCard from "@/components/ProjectCard";
-import Sidebar from "@/components/Sidebar";
 
 export default function Home() {
   return (
