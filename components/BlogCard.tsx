@@ -56,13 +56,16 @@ const BlogCard: React.FC<BlogCardProps> = (
                                 className="object-contain"
                             />
                         </div>
-                        {details?.map((detail, idx) => (
-                            <div
-                                key={idx}
-                                className='text-sm text-neutral-300 break-all'>
-                                {detail}
-                            </div>
-                        ))}
+                        <div className='flex flex-col'>
+                            {details?.map((detail, idx) => (
+                                <div
+                                    key={idx}
+                                    className='text-sm text-neutral-300 break-all'>
+                                    {detail}
+                                </div>
+                            ))}
+                        </div>
+
                     </div>
                 </div>
             </div>

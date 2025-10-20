@@ -31,7 +31,7 @@ const BottomAppBar: React.FC<BottomAppBarProps> = () => {
         const isVisible = (el: HTMLElement) => {
             const style = window.getComputedStyle(el);
             if (style.display === 'none' || style.visibility === 'hidden' || parseFloat(style.opacity || '1') === 0) return false;
-            // Ensure no ancestor hides it
+
             let node: HTMLElement | null = el;
             while (node) {
                 const s = window.getComputedStyle(node);
@@ -60,7 +60,6 @@ const BottomAppBar: React.FC<BottomAppBarProps> = () => {
             return;
         }
 
-        // Fallback to default behavior
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
@@ -89,18 +88,18 @@ const BottomAppBar: React.FC<BottomAppBarProps> = () => {
             </a>
             <button
                 type="button"
-                onClick={() => handleScrollTo('blogs')}
-                className='flex items-center justify-center  px-1 py-0.5 rounded-md transition-transform duration-200 ease-in-out hover:scale-110 hover:border-neutral-300 gap-2 cursor-pointer'>
-                <div className='text-neutral-200 font-semibold text-md'>
-                    Blogs
-                </div>
-            </button>
-            <button
-                type="button"
                 onClick={() => handleScrollTo('projects')}
                 className='flex items-center justify-center  px-1 py-0.5 rounded-md transition-transform duration-200 ease-in-out hover:scale-110 hover:border-neutral-300 gap-2 cursor-pointer'>
                 <div className='text-neutral-200 font-semibold text-md'>
                     Projects
+                </div>
+            </button>
+            <button
+                type="button"
+                onClick={() => handleScrollTo('blogs')}
+                className='flex items-center justify-center  px-1 py-0.5 rounded-md transition-transform duration-200 ease-in-out hover:scale-110 hover:border-neutral-300 gap-2 cursor-pointer'>
+                <div className='text-neutral-200 font-semibold text-md'>
+                    Blogs
                 </div>
             </button>
         </div>

@@ -35,6 +35,9 @@ const Sidebar: React.FC<SidebarProps> = () => {
                             <div>
                                 - I’m a full-stack developer I love building scalable and high-performance web systems.
                             </div>
+                            <div>
+                                - I Build, I Learn, I Iterate — curiosity keeps me coding.
+                            </div>
                         </div>
                         <div className='flex items-center gap-2 mt-2'>
                             <div>

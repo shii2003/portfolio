@@ -104,7 +104,10 @@ const ProjectsAndBlogComponent: React.FC<ProjectsAndBlogComponentProps> = () => 
                     srcImg="/serverless-lambda-img.png"
                     altImg="aws-image"
                     title='aws'
-                    details={["how to host an nodejs typescript api on lambda"]}
+                    details={[
+                        "Deploying a Serverless CRUD API to ",
+                        "AWS Lambda with Node.js and TypeScript"
+                    ]}
 
                     blogLink='https://medium.com/@shivaniteotia003/building-and-deploying-a-serverless-crud-api-to-aws-lambda-with-node-js-and-typescript-05bfe21e528c'
 
