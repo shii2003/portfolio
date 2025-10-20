@@ -13,10 +13,10 @@ const ProjectsAndBlogComponent: React.FC<ProjectsAndBlogComponentProps> = () => 
         <div className="flex flex-col items-center justify-center ">
             <div
                 id='projects'
-                className="flex items-center text-lg px-2 py-2 font-semibold border-b w-full border-neutral-700">
+                className="flex items-center text-lg px-2 py-2 font-semibold border-b w-full border-neutral-700 mb-7">
                 PROJECTS
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4 mb-6  justify-center items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4 mb-9  justify-center items-center">
                 <ProjectCard
                     repoImageSrc="/temulate-img.png"
                     techLogos={[
@@ -96,14 +96,14 @@ const ProjectsAndBlogComponent: React.FC<ProjectsAndBlogComponentProps> = () => 
             </div>
             <div
                 id='blogs'
-                className="flex items-center text-lg px-2 py-2 font-semibold w-full border-b border-neutral-700">
+                className="flex items-center text-lg px-2 py-2 font-semibold w-full border-b border-neutral-700 mb-7">
                 BLOG
             </div>
             <div className="flex flex-col gap-6 mt-4 mb-6 items-start px-2 py-2 " >
                 <BlogCard
                     srcImg="/serverless-lambda-img.png"
                     altImg="aws-image"
-                    title='aws'
+                    title='Deploying API to AWS Lambda'
                     details={[
                         "Deploying a Serverless CRUD API to ",
                         "AWS Lambda with Node.js and TypeScript"
