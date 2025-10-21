@@ -1,25 +1,7 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  /* config options here */
+}
 
-  images: {
-    unoptimized: true,
-    dangerouslyAllowSVG: true,
-  },
-  outputFileTracingExcludes: {
-    "*": [
-      "**/*.md",
-      "**/*.map",
-      "**/LICENSE*",
-      "**/README*",
-      "**/__tests__/**",
-      "**/test/**",
-      "**/tests/**",
-      "**/docs/**",
-      "**/examples/**",
-      "**/benchmark/**",
-    ],
-  },
-};
-
-export default nextConfig;
+export default nextConfig
