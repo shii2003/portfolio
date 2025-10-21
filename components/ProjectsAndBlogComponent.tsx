@@ -80,7 +80,7 @@ const ProjectsAndBlogComponent: React.FC<ProjectsAndBlogComponentProps> = () => 
                         { src: "/TailwindCSS.svg", alt: "Tailwind CSS" },
                         { src: "/prisma-light.svg", alt: "Typescript" },
                         { src: "/typescript.svg", alt: "Typescript" },
-                        { src: "/kubernetes.svg", alt: "Kubernetes" },
+                        { src: "/kuber.svg", alt: "Kubernetes" },
                         { src: "/docker-logo.svg", alt: "Docker" },
                     ]}
                     title='Youcanban'

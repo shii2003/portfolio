@@ -96,7 +96,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
                 <div className=' flex gap-2'>
                     <LogoContainer src='/docker-logo.svg' alt='docker' />
                     <LogoContainer src='/awslogo.svg' alt='aws' />
-                    <LogoContainer src='/kubernetes.svg' alt='kubernetes' />
+                    <LogoContainer src='/kuber.svg' alt='kubernetes' />
                     <LogoContainer src='/aws-lambda.svg' alt='lambda' />
                 </div>
             </div>
